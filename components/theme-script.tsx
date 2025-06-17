@@ -1,8 +1,8 @@
 export function ThemeScript() {
-  return (
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
+	return (
+		<script
+			dangerouslySetInnerHTML={{
+				__html: `
           (function() {
             try {
               var savedTheme = localStorage.getItem('theme');
@@ -24,7 +24,7 @@ export function ThemeScript() {
             }
           })();
         `,
-      }}
-    />
-  )
+			}}
+		/>
+	);
 }

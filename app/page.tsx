@@ -7,25 +7,31 @@ import { Scroll, Users, Star } from "lucide-react";
 async function getBoards() {
 	try {
 		return await prisma.board.findMany({
-			orderBy: { position: 'asc' },
+			orderBy: { position: "asc" },
 			include: {
 				columns: {
 					include: {
-						tasks: true
-					}
-				}
-			}
+						tasks: true,
+					},
+				},
+			},
 		});
 	} catch (error) {
-		console.error('ボード取得エラー:', error);
+		console.error("ボード取得エラー:", error);
 		return [];
 	}
 }
 
 export default async function Home() {
 	const boards = await getBoards();
-	const totalTasks = boards.reduce((total, board) => 
-		total + board.columns.reduce((colTotal, column) => colTotal + column.tasks.length, 0), 0
+	const totalTasks = boards.reduce(
+		(total, board) =>
+			total +
+			board.columns.reduce(
+				(colTotal, column) => colTotal + column.tasks.length,
+				0,
+			),
+		0,
 	);
 
 	return (
@@ -44,20 +50,33 @@ export default async function Home() {
 								<h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wider text-amber-100 drop-shadow-lg fade-in-up">
 									🏛️ ギルド掲示板
 								</h1>
-								<p className="text-amber-200 text-sm sm:text-base lg:text-lg font-medium tracking-wide fade-in-up" style={{animationDelay: '0.2s'}}>
-									<span className="hidden sm:inline">～ </span>冒険者たちのクエスト管理システム<span className="hidden sm:inline"> ～</span>
+								<p
+									className="text-amber-200 text-sm sm:text-base lg:text-lg font-medium tracking-wide fade-in-up"
+									style={{ animationDelay: "0.2s" }}
+								>
+									<span className="hidden sm:inline">～ </span>
+									冒険者たちのクエスト管理システム
+									<span className="hidden sm:inline"> ～</span>
 								</p>
 							</div>
 						</div>
 						<div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 lg:gap-8 fade-in-right w-full lg:w-auto">
 							<div className="flex items-center gap-3 sm:gap-4">
 								<div className="text-center bg-amber-600/20 px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded-lg border border-amber-500 pulse-glow stagger-item">
-									<div className="text-xl sm:text-2xl lg:text-3xl font-bold text-amber-100 drop-shadow">{boards.length}</div>
-									<div className="text-xs sm:text-sm text-amber-200 font-medium">ボード</div>
+									<div className="text-xl sm:text-2xl lg:text-3xl font-bold text-amber-100 drop-shadow">
+										{boards.length}
+									</div>
+									<div className="text-xs sm:text-sm text-amber-200 font-medium">
+										ボード
+									</div>
 								</div>
 								<div className="text-center bg-amber-600/20 px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded-lg border border-amber-500 pulse-glow stagger-item">
-									<div className="text-xl sm:text-2xl lg:text-3xl font-bold text-amber-100 drop-shadow">{totalTasks}</div>
-									<div className="text-xs sm:text-sm text-amber-200 font-medium">クエスト</div>
+									<div className="text-xl sm:text-2xl lg:text-3xl font-bold text-amber-100 drop-shadow">
+										{totalTasks}
+									</div>
+									<div className="text-xs sm:text-sm text-amber-200 font-medium">
+										クエスト
+									</div>
 								</div>
 							</div>
 							<div className="flex items-center gap-2 sm:gap-3">
@@ -86,7 +105,9 @@ export default async function Home() {
 										📋 アクティブなクエストボード
 									</h2>
 									<p className="text-amber-700 dark:text-amber-200 text-sm sm:text-base font-medium">
-										<span className="hidden sm:inline">ドラッグ&ドロップでボードの順序を変更できます</span>
+										<span className="hidden sm:inline">
+											ドラッグ&ドロップでボードの順序を変更できます
+										</span>
 										<span className="sm:hidden">タップしてボードを開く</span>
 									</p>
 								</div>
@@ -109,7 +130,8 @@ export default async function Home() {
 								📜 クエストボードが空です
 							</h2>
 							<p className="text-amber-700 dark:text-amber-200 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
-								新しいクエストボードを作成して、<br className="hidden sm:inline" />
+								新しいクエストボードを作成して、
+								<br className="hidden sm:inline" />
 								<span className="sm:hidden"> </span>壮大な冒険を始めましょう！
 							</p>
 							<CreateBoardDialog />
