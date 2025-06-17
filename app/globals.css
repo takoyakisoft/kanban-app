@@ -45,37 +45,73 @@
 
 :root {
 	--radius: 0.625rem;
-	--background: oklch(1 0 0);
-	--foreground: oklch(0.145 0 0);
+	/* レトロな看板風カラーパレット - ライトモード */
 	--card: oklch(1 0 0);
-	--card-foreground: oklch(0.145 0 0);
+	--card-foreground: oklch(0.129 0.042 264.695);
 	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.145 0 0);
-	--primary: oklch(0.205 0 0);
-	--primary-foreground: oklch(0.985 0 0);
-	--secondary: oklch(0.97 0 0);
-	--secondary-foreground: oklch(0.205 0 0);
-	--muted: oklch(0.97 0 0);
-	--muted-foreground: oklch(0.556 0 0);
-	--accent: oklch(0.97 0 0);
-	--accent-foreground: oklch(0.205 0 0);
-	--destructive: oklch(0.577 0.245 27.325);
-	--border: oklch(0.922 0 0);
-	--input: oklch(0.922 0 0);
-	--ring: oklch(0.708 0 0);
+	--popover-foreground: oklch(0.129 0.042 264.695);
+	--primary: oklch(0.208 0.042 265.755); /* 深いアンバー */
+	--primary-foreground: oklch(0.984 0.003 247.858);
+	--secondary: oklch(0.968 0.007 247.896); /* 薄いアンバー */
+	--secondary-foreground: oklch(0.208 0.042 265.755);
+	--muted: oklch(0.968 0.007 247.896);
+	--muted-foreground: oklch(0.554 0.046 257.417);
+	--accent: oklch(0.968 0.007 247.896); /* ゴールドアクセント */
+	--accent-foreground: oklch(0.208 0.042 265.755);
+	--destructive: oklch(0.577 0.245 27.325); /* レトロレッド */
+	--border: oklch(0.929 0.013 255.508);
+	--input: oklch(0.929 0.013 255.508);
+	--ring: oklch(0.704 0.04 256.788);
 	--chart-1: oklch(0.646 0.222 41.116);
 	--chart-2: oklch(0.6 0.118 184.704);
 	--chart-3: oklch(0.398 0.07 227.392);
 	--chart-4: oklch(0.828 0.189 84.429);
 	--chart-5: oklch(0.769 0.188 70.08);
-	--sidebar: oklch(0.985 0 0);
-	--sidebar-foreground: oklch(0.145 0 0);
-	--sidebar-primary: oklch(0.205 0 0);
-	--sidebar-primary-foreground: oklch(0.985 0 0);
-	--sidebar-accent: oklch(0.97 0 0);
-	--sidebar-accent-foreground: oklch(0.205 0 0);
-	--sidebar-border: oklch(0.922 0 0);
-	--sidebar-ring: oklch(0.708 0 0);
+	--sidebar: oklch(0.984 0.003 247.858);
+	--sidebar-foreground: oklch(0.129 0.042 264.695);
+	--sidebar-primary: oklch(0.208 0.042 265.755);
+	--sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+	--sidebar-accent: oklch(0.968 0.007 247.896);
+	--sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+	--sidebar-border: oklch(0.929 0.013 255.508);
+	--sidebar-ring: oklch(0.704 0.04 256.788);
+	--background: oklch(1 0 0);
+	--foreground: oklch(0.129 0.042 264.695);
+}
+
+.dark {
+	/* レトロな看板風カラーパレット - ダークモード */
+	--background: oklch(0.129 0.042 264.695); /* 深い夜空色 */
+	--foreground: oklch(0.984 0.003 247.858); /* 温かいゴールド */
+	--card: oklch(0.208 0.042 265.755); /* 深いカード背景 */
+	--card-foreground: oklch(0.984 0.003 247.858);
+	--popover: oklch(0.208 0.042 265.755);
+	--popover-foreground: oklch(0.984 0.003 247.858);
+	--primary: oklch(0.929 0.013 255.508); /* 明るいゴールド */
+	--primary-foreground: oklch(0.208 0.042 265.755);
+	--secondary: oklch(0.279 0.041 260.031); /* 深いアンバー */
+	--secondary-foreground: oklch(0.984 0.003 247.858);
+	--muted: oklch(0.279 0.041 260.031);
+	--muted-foreground: oklch(0.704 0.04 256.788);
+	--accent: oklch(0.279 0.041 260.031); /* 鮮やかなゴールド */
+	--accent-foreground: oklch(0.984 0.003 247.858);
+	--destructive: oklch(0.704 0.191 22.216); /* ネオンレッド */
+	--border: oklch(1 0 0 / 10%);
+	--input: oklch(1 0 0 / 15%);
+	--ring: oklch(0.551 0.027 264.364);
+	--chart-1: oklch(0.488 0.243 264.376);
+	--chart-2: oklch(0.696 0.17 162.48);
+	--chart-3: oklch(0.769 0.188 70.08);
+	--chart-4: oklch(0.627 0.265 303.9);
+	--chart-5: oklch(0.645 0.246 16.439);
+	--sidebar: oklch(0.208 0.042 265.755);
+	--sidebar-foreground: oklch(0.984 0.003 247.858);
+	--sidebar-primary: oklch(0.488 0.243 264.376);
+	--sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+	--sidebar-accent: oklch(0.279 0.041 260.031);
+	--sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+	--sidebar-border: oklch(1 0 0 / 10%);
+	--sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
 .dark {
@@ -119,4 +155,415 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  /* レトロな看板風エフェクト */
+  .retro-sign {
+    background: linear-gradient(135deg, 
+      oklch(0.85 0.08 35) 0%, 
+      oklch(0.75 0.12 50) 50%, 
+      oklch(0.65 0.15 45) 100%);
+    border: 3px solid oklch(0.45 0.1 40);
+    box-shadow: 
+      0 4px 8px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: retro-glow 3s ease-in-out infinite alternate;
+  }
+
+  .dark .retro-sign {
+    background: linear-gradient(135deg, 
+      oklch(0.25 0.08 40) 0%, 
+      oklch(0.35 0.12 50) 50%, 
+      oklch(0.45 0.15 45) 100%);
+    border: 3px solid oklch(0.7 0.18 50);
+    box-shadow: 
+      0 4px 8px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 215, 0, 0.3),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 215, 0, 0.5);
+    animation: retro-glow-dark 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes retro-glow {
+    0% {
+      box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(245, 158, 11, 0.2);
+    }
+    100% {
+      box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+        0 0 30px rgba(245, 158, 11, 0.4);
+    }
+  }
+
+  @keyframes retro-glow-dark {
+    0% {
+      box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 215, 0, 0.3),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(255, 215, 0, 0.4),
+        0 0 50px rgba(255, 165, 0, 0.2);
+    }
+    100% {
+      box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 215, 0, 0.4),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3),
+        0 0 35px rgba(255, 215, 0, 0.6),
+        0 0 70px rgba(255, 165, 0, 0.3);
+    }
+  }
+
+  .retro-card {
+    background: linear-gradient(145deg, 
+      oklch(0.96 0.03 40) 0%, 
+      oklch(0.92 0.04 45) 100%);
+    border: 2px solid oklch(0.75 0.12 50);
+    box-shadow: 
+      0 6px 12px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: card-float 6s ease-in-out infinite;
+  }
+
+  .retro-card:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+      0 12px 24px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      0 0 20px rgba(245, 158, 11, 0.1);
+  }
+
+  .dark .retro-card {
+    background: linear-gradient(145deg, 
+      oklch(0.18 0.04 35) 0%, 
+      oklch(0.22 0.05 40) 100%);
+    border: 2px solid oklch(0.65 0.15 55);
+    box-shadow: 
+      0 6px 12px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 215, 0, 0.2);
+  }
+
+  .dark .retro-card:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+      0 12px 24px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 215, 0, 0.3),
+      0 0 25px rgba(255, 215, 0, 0.2);
+  }
+
+  @keyframes card-float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-2px);
+    }
+  }
+
+  .retro-button {
+    background: linear-gradient(145deg, 
+      oklch(0.75 0.12 50) 0%, 
+      oklch(0.65 0.15 45) 100%);
+    border: 2px solid oklch(0.55 0.15 45);
+    box-shadow: 
+      0 3px 6px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .retro-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .retro-button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 
+      0 6px 12px rgba(0, 0, 0, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      0 0 15px rgba(245, 158, 11, 0.3);
+  }
+
+  .retro-button:hover::before {
+    left: 100%;
+  }
+
+  .retro-button:active {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 
+      0 4px 8px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .retro-button {
+    background: linear-gradient(145deg, 
+      oklch(0.35 0.12 50) 0%, 
+      oklch(0.45 0.15 45) 100%);
+    border: 2px solid oklch(0.7 0.18 50);
+    box-shadow: 
+      0 3px 6px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 215, 0, 0.3);
+  }
+
+  .dark .retro-button::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent);
+  }
+
+  .dark .retro-button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 
+      0 6px 12px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 215, 0, 0.4),
+      0 0 20px rgba(255, 215, 0, 0.3);
+  }
+
+  .dark .retro-button:active {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 
+      0 4px 8px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 215, 0, 0.2);
+  }
+
+  /* 新しいアニメーション効果 */
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+  }
+
+  .bounce-in {
+    animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  .shake-on-error {
+    animation: shake 0.5s ease-in-out;
+  }
+
+  .success-bounce {
+    animation: successBounce 0.6s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(245, 158, 11, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.8);
+    }
+  }
+
+  .dark .pulse-glow {
+    animation: pulseGlowDark 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlowDark {
+    0%, 100% {
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+    }
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+  }
+
+  @keyframes successBounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  /* スタガードアニメーション */
+  .stagger-item {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .stagger-item:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-item:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-item:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-item:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-item:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-item:nth-child(6) { animation-delay: 0.6s; }
+
+  /* ローディングアニメーション */
+  .loading-dots::after {
+    content: '';
+    animation: loadingDots 1.5s infinite;
+  }
+
+  @keyframes loadingDots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
+  }
+
+  /* モバイル向けレスポンシブ最適化 */
+  @media (max-width: 768px) {
+    .retro-sign {
+      padding: 1rem;
+      margin: 0.5rem;
+    }
+
+    .retro-card {
+      padding: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    .retro-button {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+
+    /* モバイル用のアニメーション軽量化 */
+    .fade-in-up,
+    .fade-in-left,
+    .fade-in-right,
+    .bounce-in {
+      animation-duration: 0.4s;
+    }
+
+    .stagger-item:nth-child(n) {
+      animation-delay: 0.05s;
+    }
+
+    /* モバイルでのグロー効果を軽減 */
+    .pulse-glow {
+      animation: none;
+    }
+
+    .retro-sign {
+      animation: none;
+    }
+
+    /* タッチ操作向けの最小サイズ */
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* タブレット向け調整 */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .retro-card {
+      padding: 1.25rem;
+    }
+
+    .retro-button {
+      padding: 0.625rem 1.25rem;
+    }
+  }
+
+  /* 小さなモバイル画面向け */
+  @media (max-width: 480px) {
+    .retro-sign {
+      padding: 0.75rem;
+      margin: 0.25rem;
+    }
+
+    .retro-card {
+      padding: 0.75rem;
+      border-width: 1px;
+    }
+
+    /* テキストサイズの調整 */
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.25rem !important; }
+    h3 { font-size: 1.125rem !important; }
+
+    /* アニメーションを無効化してパフォーマンス向上 */
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
